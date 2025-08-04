@@ -1,0 +1,9 @@
+# Servo configuration message
+# Stores current servo configuration
+
+uint8 actuator_id
+uint8 gear_ratio        # Gear ratio (1-255)
+uint8 min_angle         # Minimum angle (0-255)
+uint8 max_angle         # Maximum angle (0-255)
+uint16 feedback_frequency # Feedback frequency in Hz
+uint16 max_speed        # Maximum speed
