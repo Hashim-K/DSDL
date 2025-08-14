@@ -1,0 +1,19 @@
+# Servo Debug message
+
+uint8 actuator_id
+bool armed                      # Servo armed state
+int16 calculation_offset        # Offset for angle calculation
+int16 target_wing_angle         # Target wing angle
+int16 current_angle             # Current wing angle (latest_wing_angle)
+int16 revolution_count          # Revolution count for multi-turn tracking
+int16 target_servo_position     # Target servo position
+int16 current_position_global   # Current global position
+int16 current_position          # Current servo position (latest_servo_position)
+int16 previous_servo_position   # Previous servo position
+int16 current_speed             # Current speed (latest_servo_speed)
+int16 latest_load               # Load reading
+uint8 voltage                   # Voltage (latest_voltage)
+uint8 temp                      # Temperature (latest_temperature)
+uint8 errcode                   # Error code (latest_error_code)
+uint8 health_state              # Health state (latest_health_state)
+uint16 integral_load            # Integral load accumulator

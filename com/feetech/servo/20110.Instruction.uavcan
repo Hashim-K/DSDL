@@ -5,16 +5,20 @@ uint8 actuator_id
 
 # Message types
 uint8 MSG_TYPE_ARM_DISARM = 0
-uint8 MSG_TYPE_SET_TARGET_POS = 1
-uint8 MSG_TYPE_SET_GEAR_RATIO = 2
-uint8 MSG_TYPE_SET_MAX_SPEED = 3
-uint8 MSG_TYPE_SET_FREQ = 4
+uint8 MSG_TYPE_SET_TARGET_ANGLE = 1
+uint8 MSG_TYPE_SET_SERIAL_FREQ = 2
+uint8 MSG_TYPE_SET_CAN_FREQ = 3
+uint8 MSG_TYPE_SET_LOG_LEVEL = 4
+uint8 MSG_TYPE_SET_TARGET_POSITION = 5
+
 uint8 message_type
 
 # Message data (interpretation depends on message_type)
 # For ARM_DISARM: data[0] = 1 for arm, 0 for disarm
-# For SET_TARGET_POS: data[0] = target position (0-255)
-# For SET_GEAR_RATIO: data[0] = gear ratio (1-255)
-# For SET_MAX_SPEED: data[0] = low byte, data[1] = high byte
-# For SET_FREQ: data[0] = low byte, data[1] = high byte
+# For SET_TARGET_ANGLE: data[0] = target angle (0-255)
+# For SET_SERIAL_FREQ: data[0] = low byte, data[1] = high byte
+# For SET_CAN_FREQ: data[0] = low byte, data[1] = high byte
+# For SET_LOG_LEVEL: data[0] = 1 for long, 0 for short
+# For SET_TARGET_POSITION: data[0] = target angle (0-255)
+
 uint8[4] data

@@ -2,11 +2,4 @@
 # Current servo state and feedback
 
 uint8 actuator_id
-bool armed              # Servo armed state
-uint16 current_angle    # Current angle position
-uint16 target_angle     # Target angle position
-uint16 current_speed    # Current speed
-uint8 load              # Load (actual_load / 10)
-uint8 temp              # Temperature
-uint8 voltage           # Voltage
-uint8 errcode           # Error code
+int16 current_angle         # Current wing angle (latest_wing_angle)
