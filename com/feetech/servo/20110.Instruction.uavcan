@@ -15,10 +15,10 @@ uint8 message_type
 
 # Message data (interpretation depends on message_type)
 # For ARM_DISARM: data[0] = 1 for arm, 0 for disarm
-# For SET_TARGET_ANGLE: data[0] = target angle (0-255)
+# For SET_TARGET_ANGLE: data[0] = low byte, data[1] = high byte
 # For SET_SERIAL_FREQ: data[0] = low byte, data[1] = high byte
 # For SET_CAN_FREQ: data[0] = low byte, data[1] = high byte
 # For SET_LOG_LEVEL: data[0] = 1 for long, 0 for short
-# For SET_TARGET_POSITION: data[0] = target angle (0-255)
+# For SET_TARGET_POSITION: data[0] = low byte, data[1] = high byte
 
 uint8[2] data

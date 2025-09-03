@@ -16,4 +16,3 @@ uint8 voltage                   # Voltage (latest_voltage)
 uint8 temp                      # Temperature (latest_temperature)
 uint8 errcode                   # Error code (latest_error_code)
 uint8 health_state              # Health state (latest_health_state)
-uint16 integral_load            # Integral load accumulator
