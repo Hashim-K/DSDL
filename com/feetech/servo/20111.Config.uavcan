@@ -2,9 +2,9 @@
 # Stores current servo configuration
 
 uint8 actuator_id
-uint8 gear_ratio        # Gear ratio (1-255)
-int16 min_angle         # Minimum angle (0-255)
-int16 max_angle         # Maximum angle (0-255)
-float32 serial_frequency # Serial Feedback frequency in Hz
-float32 can_frequency    # CAN Feedback frequency in Hz
-uint16 max_speed        # Maximum speed
+uint8 gear_ratio            # Gear ratio (1-255)
+int16 min_angle             # Minimum angle
+int16 max_angle             # Maximum angle
+float32 serial_frequency    # Serial Feedback frequency in Hz
+float32 can_frequency       # CAN Feedback frequency in Hz
+uint16 max_speed            # Maximum speed

@@ -14,11 +14,15 @@ uint8 MSG_TYPE_SET_TARGET_POSITION = 5
 uint8 message_type
 
 # Message data (interpretation depends on message_type)
-# For ARM_DISARM: data[0] = 1 for arm, 0 for disarm
-# For SET_TARGET_ANGLE: data[0] = low byte, data[1] = high byte
-# For SET_SERIAL_FREQ: data[0] = low byte, data[1] = high byte
-# For SET_CAN_FREQ: data[0] = low byte, data[1] = high byte
-# For SET_LOG_LEVEL: data[0] = 1 for long, 0 for short
-# For SET_TARGET_POSITION: data[0] = low byte, data[1] = high byte
+#
+# Endianness: Little-endian. Multi-byte integers are LSB first.
+# Signedness: Standard C two's-complement for signed fields.
+#
+# For ARM_DISARM: data[0] = 1 (arm), 0 (disarm); data[1] = 0
+# For SET_TARGET_ANGLE: int16, little-endian, units = centidegrees (cdg). data[0] = LSB, data[1] = MSB
+# For SET_SERIAL_FREQ: uint16, little-endian, units = Hz. data[0] = LSB, data[1] = MSB
+# For SET_CAN_FREQ: uint16, little-endian, units = Hz. data[0] = LSB, data[1] = MSB
+# For SET_LOG_LEVEL: data[0] = 0 (short), 1 (long); data[1] = 0
+# For SET_TARGET_POSITION: int16, little-endian, raw servo steps. data[0] = LSB, data[1] = MSB
 
 uint8[2] data
